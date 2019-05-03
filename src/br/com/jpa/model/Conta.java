@@ -1,9 +1,12 @@
 package br.com.jpa.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -17,6 +20,8 @@ public class Conta {
 	private String banco;
 	private String agencia;
 	private String numero;
+	@OneToMany(mappedBy = "conta") //apenas reflete o relacionamento ja existente na classe Movimentacao
+	private List<Movimentacao> movimentacoes;
 
 	public Integer getId() {
 		return id;
@@ -56,6 +61,15 @@ public class Conta {
 
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+	
+
+	public List<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
+	}
+
+	public void setMovimentacoes(List<Movimentacao> movimentacoes) {
+		this.movimentacoes = movimentacoes;
 	}
 
 	public String toString(Conta conta) throws Exception {
