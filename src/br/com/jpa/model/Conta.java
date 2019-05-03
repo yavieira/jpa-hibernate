@@ -1,13 +1,10 @@
-package br.com.caelum.financas.modelo;
+package br.com.jpa.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-/**
- * Created by leonardocordeiro on 24/02/17.
- */
+import javax.persistence.OneToOne;
 
 @Entity
 public class Conta {
@@ -15,11 +12,12 @@ public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String titular;
+    @OneToOne
+    private Titular titular;
     private String banco;
     private String agencia;
     private String numero;
-
+ 
     public Integer getId() {
         return id;
     }
@@ -28,11 +26,11 @@ public class Conta {
         this.id = id;
     }
 
-    public String getTitular() {
+    public Titular getTitular() {
         return titular;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Titular titular) {
         this.titular = titular;
     }
 
