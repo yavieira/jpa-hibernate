@@ -25,6 +25,7 @@ public class TesteJPQL {
 		query.setParameter("pConta", conta);
 		query.setParameter("pTipo", TipoMovimentacaoEnum.SAIDA);
 
+		@SuppressWarnings("unchecked")
 		List<Movimentacao> results = query.getResultList();
 
 		if (results != null) {

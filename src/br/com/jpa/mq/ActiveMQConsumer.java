@@ -1,7 +1,5 @@
 package br.com.jpa.mq;
 
-import java.util.Scanner;
-
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -55,17 +53,14 @@ public class ActiveMQConsumer {
 						conta.setNumero(txtMsg.getText().substring(38, 44));
 						conta.getTitular().setNome(txtMsg.getText().substring(62, 66));
 						ContaDAO contaDAO = new ContaDAO();
-						contaDAO.addConta(conta);
+						contaDAO.addConta(conta, titular);
 					} catch (JMSException e) {
 						e.printStackTrace();
 					}
 				}
 			}	
 		});
-
 		
-//		new Scanner(System.in).nextLine();
-
 		session.close();
 		con.close();
 		context.close();

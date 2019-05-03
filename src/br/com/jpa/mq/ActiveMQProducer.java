@@ -37,11 +37,11 @@ public class ActiveMQProducer {
 		Conta conta = new Conta();
 		Titular titular = new Titular();
 		titular.setId(2);
-		conta.setAgencia("1234");
-		conta.setNumero("456789");
-		conta.setBanco("Bradesco");
-		conta.setTitular(titular);
-		conta.getTitular().setNome("Yuri");;
+		conta.setAgencia("1234"); //	4 dígitos
+		conta.setNumero("456789"); //	6 dígitos
+		conta.setBanco("Bradesco"); //	8 dígitos
+		conta.setTitular(titular); 
+		conta.getTitular().setNome("Yuri"); //	4 dígitos
 		
 		Message message = session.createTextMessage(conta.toString(conta));
 		
