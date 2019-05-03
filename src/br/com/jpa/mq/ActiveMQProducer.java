@@ -11,6 +11,10 @@ import javax.naming.InitialContext;
 import br.com.jpa.model.Conta;
 import br.com.jpa.model.Titular;
 
+/* 
+ * Classe de teste para produzir uma mensagem em String
+ * */
+
 public class ActiveMQProducer {
 	
 	//JMS 1.1 -> ConnectionFactory -> Connection -> Session -> MessageConsumer

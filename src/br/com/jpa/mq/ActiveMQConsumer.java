@@ -17,6 +17,10 @@ import br.com.jpa.dao.ContaDAO;
 import br.com.jpa.model.Conta;
 import br.com.jpa.model.Titular;
 
+/* 
+ * Classe de Teste para consumir uma String da fila e persistir no banco
+ * */
+
 public class ActiveMQConsumer {
 
 	// JMS 1.1 -> ConnectionFactory -> Connection -> Session -> MessageConsumer
@@ -60,7 +64,7 @@ public class ActiveMQConsumer {
 		});
 
 		
-		new Scanner(System.in).nextLine();
+//		new Scanner(System.in).nextLine();
 
 		session.close();
 		con.close();
