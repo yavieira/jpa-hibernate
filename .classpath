@@ -24,5 +24,6 @@
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.24-bin.jar"/>
 	<classpathentry kind="lib" path="lib/postgresql-9.4.1212.jre6.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="lib/activemq-all-5.12.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

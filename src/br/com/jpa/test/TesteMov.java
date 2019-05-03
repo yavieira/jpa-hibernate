@@ -20,6 +20,7 @@ public class TesteMov {
 		Movimentacao mov = new Movimentacao();
 		mov.setTipo(TipoMovimentacaoEnum.SAIDA);
 		mov.setValor(new BigDecimal("200.0"));
+		mov.setDescricao("Viagem");
 
 		Conta conta = new Conta();
 		conta.setBanco("Itaú");

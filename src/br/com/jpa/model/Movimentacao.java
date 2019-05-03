@@ -24,6 +24,8 @@ public class Movimentacao {
 	
 	private BigDecimal valor;
 	
+	private String descricao;
+
 	@ManyToOne
 	private Conta conta;
 
@@ -57,5 +59,13 @@ public class Movimentacao {
 
 	public void setConta(Conta conta) {
 		this.conta = conta;
+	}
+	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 }
